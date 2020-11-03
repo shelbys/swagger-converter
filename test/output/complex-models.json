@@ -84,6 +84,24 @@
                     "projects"
                 ]
             }
+        },
+        "/projects.json": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/definitions/Project"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            }
         }
     },
     "swagger": "2.0",

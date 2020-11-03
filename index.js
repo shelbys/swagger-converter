@@ -353,6 +353,7 @@ prototype.buildTypeProperties = function(oldType, allowRef) {
     object:      {type: 'object'},
     file:        {type: 'file'},
     void:        {},
+    '':          {type: 'array'},
     //Swagger 1.1 types
     int:         {type: 'integer', format: 'int32'},
     long:        {type: 'integer', format: 'int64'},
