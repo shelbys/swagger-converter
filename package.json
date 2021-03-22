@@ -1,8 +1,9 @@
 {
   "name": "swagger-converter",
-  "version": "1.5.1",
+  "version": "2.1.0",
   "description": "Converts Swagger documents from version 1.x to version 2.0",
   "main": "index.js",
+  "files": [],
   "engines": {
     "node": ">= 10.x"
   },
@@ -32,14 +33,14 @@
   },
   "homepage": "https://github.com/apigee-127/swagger-converter",
   "devDependencies": {
-    "chai": "4.1.2",
-    "eslint": "7.14.0",
-    "mocha": "8.2.1",
+    "chai": "4.3.0",
+    "eslint": "7.20.0",
+    "mocha": "8.3.0",
     "nyc": "15.1.0",
     "prettier": "2.2.1",
     "sway": "2.0.6"
   },
   "dependencies": {
-    "urijs": "^1.16.1"
+    "urijs": "^1.19.6"
   }
 }
