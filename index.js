@@ -490,14 +490,18 @@ prototype.buildDataType = function (oldDataType, allowRef) {
 
   extend(result, {
     format: oldDataType.format,
+    pattern: oldDataType.pattern,
     items: oldItems,
     uniqueItems: fixNonStringValue(oldDataType.uniqueItems),
     minimum: fixNonStringValue(oldDataType.minimum),
     maximum: fixNonStringValue(oldDataType.maximum),
     maxItems: fixNonStringValue(oldDataType.maxItems),
     minItems: fixNonStringValue(oldDataType.minItems),
+    maxLength: oldDataType.maxLength,
+    minLength: oldDataType.minLength,
     default: defaultValue,
     enum: oldDataType.enum,
+    collectionFormat: oldDataType.collectionFormat,
   });
 
   if (result.type === 'array' && !isValue(result.items)) {
@@ -828,6 +832,7 @@ prototype.buildModel = function (oldModel) {
   return extend(this.buildDataType(oldModel, true), customProperties, {
     description: oldModel.description,
     required: undefinedIfEmpty(required),
+    additionalProperties: oldModel.additionalProperties,
     properties: undefinedIfEmpty(properties),
     discriminator: oldModel.discriminator,
     example: oldModel.example,
